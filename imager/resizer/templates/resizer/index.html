@@ -1,0 +1,18 @@
+{% extends 'resizer/base_template.html' %}
+{% load static %}
+
+
+{% block content %}
+	<h1>Список изображений</h1>
+
+	<div>
+	    {%if photos%}
+		    {% for photo in photos %}
+		        <div><a href="{{ photo.photo.url }}">{{photo.photo}}</a></div>
+		    {% endfor %}
+		{%else %}
+			<div>Нет доступных изображений</div>
+		{%endif%}
+	</div>
+	<a href="/newphoto">Добавить изображение</a>
+{% endblock %}

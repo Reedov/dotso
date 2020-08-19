@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+env/
+venv/
+static/
+migrations/
+db.sqlite3
+*.log
+log/
+media/
+celerybeat-schedule
