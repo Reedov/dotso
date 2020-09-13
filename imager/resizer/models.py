@@ -13,7 +13,7 @@ class Foto(models.Model):
     def __str__(self):
         return f"{self.photo}"
 
-    def save(self): #TODO: бесконечная рекурсия
+    def save(self): 
         if self.image_url and not self.photo:
             try:
                 urlimage = urlopen(self.image_url).read()
